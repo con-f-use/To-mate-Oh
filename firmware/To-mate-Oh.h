@@ -61,7 +61,7 @@
  * ./hardware/To-mate-Oh-etch.pdf, ./hardware/To-mate-Oh-schematic.pdf,
  * ./hardware/To-mate-Oh-prototype.jpg, ./hardware/To-mate-Oh-final.jpg,
  * ./hardware/To-mate-Oh-kit.jpg, ./hardware/To-mate-Oh-panel.gerber.zip,
- * ./LICENSE.txt, ./README.txt
+ * ./LICENSE.txt, ./README.md
  *
  * Their use is permitted under the terms of GNU General Public License as well.
  * If you want to use any part under different terms, please feel free to ask
@@ -114,7 +114,12 @@
  * <a href="http://store.curiousinventor.com/guides/How_To_Solder">
  * how to solder</a> components to them. With that in mind, the eagle files,
  * pictures and schematics in the ./hardware directory should be all you need,
- * except for the components of course. I listed the components and tools needed
+ * except for the components of course. The coin cell holder is sandwiched
+ * between the two halves of the board. You might need to fill the middle
+ * trough hole pad under the buzzer with something to make proper contact with
+ * the negative side of the battery. The out two through hole pads can be used
+ * to solder the battery holder (if needed with the aid of some wire). I listed
+ * the components and tools needed
  * below. The components are available e.g. on
  * <a href="https://mouser.com">Mouser</a>. Exact values and part numbers are
  * only recommendations. I listed what I used in brackets:
@@ -136,7 +141,7 @@
  *     battery voltage to work as reverse polarity protection. A low on
  *     resistance is nice, too. If you don't use it, short source and drain
  *     together.},\n
- *     1x 10 uF Capacitor, SMD 1210
+ *     1x 1-10 uF Capacitor, SMD 1210
  *     \footnote{The 10uF cap is a good thing to enhance battery life by
  *     smoothing out peak drains/spikes. It is however not necessary.}
  *
@@ -193,8 +198,9 @@
  * nicely.
  *
  * However, running "make program" in the \e firmware direcotry should be
- * sufficient. Maybe you will have to edit the \e Makefile especially if you are
- * using a programmer other than
+ * sufficient. Maybe you will have change the value of "DEVICE" or other
+ * settings the \e Makefile, especially if you are using a programmer other
+ * than
  * <a href="http://www.ladyada.net/make/usbtinyisp/">USBtinyISP</a>
  * (btw.: you can build USBtinyISP at home).
  *
@@ -256,7 +262,7 @@ unsigned char state;    ///< Current state the timer is in
 #define REST 4          ///< 5 min rest
 
 
-// COMPUTED VALUES
+// DERIVED VALUES
 #if ON_TIME<1 || ON_TIME>10
   #error "T_ON must be an integer between 1 and 10"
 #endif
@@ -312,7 +318,7 @@ unsigned Get_time();
 unsigned Get_cal();
 
 /** Invokes the respective actions, when the button was pressed. */
-void handle_button_press();
+void Handle_button_press();
 
 #endif
 

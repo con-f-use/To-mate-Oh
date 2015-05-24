@@ -33,7 +33,7 @@ int main(void) {
     state = WORK;         // When not idling go to work
     cal = Get_cal();      // Calibrate the touch button
 
-    // INDICATE READINESS (and led/buzzer function as well es calibration value)
+    // INDICATE READINESS (and led/buzzer function & calibration value)
     for(i=0; i<cal; ++i) {
       Shine_led(i%6, 10);   _delay_ms(10);
       if( i>5 && Get_time()>cal ) break;
@@ -41,16 +41,16 @@ int main(void) {
 
     // MAIN LOOP
     while( 1 ) {
-      if( Get_time()>cal ) handle_button_press();
+      if( Get_time()>cal ) Handle_button_press();
       Sleep_now(1, WDTO_500MS);
     }
 
     return 0;
 }
 
-//####################################################################### Timing
+//###################################################################### Timing
 
-void handle_button_press() {
+void Handle_button_press() {
     int i, j;
     unsigned char k;
     uint32_t t_led;
@@ -123,11 +123,11 @@ void handle_button_press() {
     Play_sound();
 }
 
-//==============================================================================
+//=============================================================================
 // HELPERS
-//==============================================================================
+//=============================================================================
 
-//####################################################################Indicators
+//###################################################################Sleep mode
 
 EMPTY_INTERRUPT(WDT_vect);
 
@@ -155,7 +155,7 @@ void Sleep_now(uint8_t periods, uint8_t timeout) {
   }
 }
 
-//####################################################################Indicators
+//###################################################################Indicators
 
 void Set_leds(int led) { // Same as Robin's version except for white spaces.
   switch (led) {
@@ -219,7 +219,7 @@ void Play_sound() {
     }
 }
 
-//################################################################## Cap sensing
+//################################################################# Cap sensing
 
 unsigned Get_time() {
     unsigned i = 0;

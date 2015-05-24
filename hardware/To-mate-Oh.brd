@@ -15,7 +15,7 @@
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
@@ -139,14 +139,18 @@ Use permitted under GPL v3.0 and later.</text>
 v1.1</text>
 <text x="2.55525" y="6.3335" size="0.8128" layer="1" font="vector">To-mate-Oh
 v1.1</text>
-<text x="11.73175" y="32.5755" size="0.6096" layer="22" font="vector" rot="MR270">To-mate-Oh board, v.1.1
+<text x="13.06525" y="33.147" size="0.6096" layer="26" font="vector" rot="MR270">To-mate-Oh board, v.1.1
 Copyright © 2014 con-f-use
 Use permitted under GNU
 General Public License v3.0
 or later.
 
 To-mate-Oh is based on 
-POMODORO by FakuFaku </text>
+POMODORO by FakuFaku.
+
+Disconnect battery and 
+supply your own voltage
+to program.</text>
 <wire x1="22.225" y1="17.272" x2="0" y2="17.272" width="0.4064" layer="20" style="dashdot"/>
 <wire x1="4.8895" y1="29.1465" x2="4.8895" y2="28.702" width="0.129" layer="25"/>
 <wire x1="4.8895" y1="28.702" x2="4.8895" y2="28.2575" width="0.129" layer="25"/>
@@ -172,6 +176,8 @@ POMODORO by FakuFaku </text>
 <wire x1="7.8865" y1="29.8775" x2="8.36275" y2="29.8775" width="0.129" layer="25"/>
 <wire x1="7.8865" y1="29.21075" x2="7.8865" y2="28.57575" width="0.129" layer="25"/>
 <wire x1="7.8865" y1="29.8775" x2="7.8865" y2="30.449" width="0.129" layer="25"/>
+<wire x1="21.209" y1="11.938" x2="21.336" y2="11.938" width="0.4064" layer="25"/>
+<wire x1="21.336" y1="11.938" x2="21.336" y2="10.63625" width="0.4064" layer="25"/>
 </plain>
 <libraries>
 <library name="led">
@@ -3719,22 +3725,22 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="LED1" library="led" package="CHIPLED_0805" value="" x="5.15625" y="27.432" smashed="yes" rot="R270">
+<element name="LED1" library="led" package="CHIPLED_0805" value="Blue" x="5.15625" y="27.432" smashed="yes" rot="R270">
 <attribute name="VALUE" x="3.88625" y="24.892" size="1.27" layer="27"/>
 </element>
-<element name="LED2" library="led" package="CHIPLED_0805" value="" x="5.15625" y="25.527" smashed="yes" rot="R270">
+<element name="LED2" library="led" package="CHIPLED_0805" value="Blue" x="5.15625" y="25.527" smashed="yes" rot="R270">
 <attribute name="VALUE" x="3.88625" y="22.987" size="1.27" layer="27"/>
 </element>
-<element name="LED3" library="led" package="CHIPLED_0805" value="" x="5.15625" y="22.987" smashed="yes" rot="R270">
+<element name="LED3" library="led" package="CHIPLED_0805" value="Blue" x="5.15625" y="22.987" smashed="yes" rot="R270">
 <attribute name="VALUE" x="3.88625" y="20.447" size="1.27" layer="27"/>
 </element>
-<element name="LED4" library="led" package="CHIPLED_0805" value="Red" x="9.23925" y="29.60375" smashed="yes">
+<element name="STATUS" library="led" package="CHIPLED_0805" value="Red" x="9.23925" y="29.60375" smashed="yes">
 <attribute name="VALUE" x="11.77925" y="28.33375" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="LED5" library="led" package="CHIPLED_0805" value="" x="5.15625" y="31.877" smashed="yes" rot="R270">
+<element name="LED5" library="led" package="CHIPLED_0805" value="Blue" x="5.15625" y="31.877" smashed="yes" rot="R270">
 <attribute name="VALUE" x="3.88625" y="29.337" size="1.27" layer="27"/>
 </element>
-<element name="LED6" library="led" package="CHIPLED_0805" value="" x="5.15625" y="29.972" smashed="yes" rot="R270">
+<element name="LED6" library="led" package="CHIPLED_0805" value="Blue" x="5.15625" y="29.972" smashed="yes" rot="R270">
 <attribute name="VALUE" x="3.88625" y="27.432" size="1.27" layer="27"/>
 </element>
 <element name="IC1" library="SparkFun-DigitalIC" package="SO08-EIAJ" value="Tiny45-20-SMT" x="15.08125" y="29.30525" smashed="yes" rot="R270">
@@ -3758,22 +3764,22 @@ design rules under a new name.</description>
 <element name="ISP" library="jcgb" package="TC2030-MCP-NL" value="ATMEL-ISPATMEL_ISP_TC2030" x="19.2405" y="24.73325" smashed="yes" rot="R180">
 <attribute name="NAME" x="15.875" y="22.5425" size="0.8128" layer="25"/>
 </element>
-<element name="JP1" library="pinhead" package="1X01" value="" x="1.27" y="19.558" smashed="yes" rot="R270">
+<element name="JP1" library="pinhead" package="1X01" value="JGND1" x="1.27" y="19.558" smashed="yes" rot="R270">
 <attribute name="VALUE" x="-1.905" y="20.828" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="JP2" library="pinhead" package="1X01" value="" x="1.27" y="14.478" smashed="yes" rot="R270">
+<element name="JP2" library="pinhead" package="1X01" value="JGND2" x="1.27" y="14.478" smashed="yes" rot="R270">
 <attribute name="VALUE" x="-1.905" y="15.748" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="JP3" library="pinhead" package="1X01" value="" x="18.4785" y="19.558" smashed="yes" rot="R270">
+<element name="JP3" library="pinhead" package="1X01" value="JPB1" x="18.4785" y="19.558" smashed="yes" rot="R270">
 <attribute name="VALUE" x="15.3035" y="20.828" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="JP4" library="pinhead" package="1X01" value="" x="18.4785" y="14.478" smashed="yes" rot="R270">
+<element name="JP4" library="pinhead" package="1X01" value="JPB2" x="18.4785" y="14.478" smashed="yes" rot="R270">
 <attribute name="VALUE" x="15.3035" y="15.748" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="JP5" library="pinhead" package="1X01" value="" x="21.0185" y="14.478" smashed="yes" rot="R270">
+<element name="JP5" library="pinhead" package="1X01" value="JVCC1" x="21.0185" y="14.478" smashed="yes" rot="R270">
 <attribute name="VALUE" x="17.8435" y="15.748" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="JP6" library="pinhead" package="1X01" value="" x="21.0185" y="19.558" smashed="yes" rot="R270">
+<element name="JP6" library="pinhead" package="1X01" value="JVCC2" x="21.0185" y="19.558" smashed="yes" rot="R270">
 <attribute name="VALUE" x="17.8435" y="20.828" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="LOGO" library="jcgb" package="UNETHILOGO_TINY" value="UNETHILOGOUNETHILOGO_TINY" x="8.62" y="10.92325"/>
@@ -3782,13 +3788,13 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="18.415" y="7.477" size="1.27" layer="27"/>
 </element>
 <element name="BUZ" library="SparkFun-Electromechanical" package="BUZZER-CMT1102" value="254-PB119-ROX" x="11.25525" y="8.6995" rot="R135"/>
-<element name="BAT" library="jcgb" package="BATTERY_20MM_PTH_COMPACT" value="" x="11.1125" y="4.74675" rot="MR180"/>
+<element name="BAT" library="jcgb" package="BATTERY_20MM_PTH_COMPACT" value="3.3-5.0V" x="11.1125" y="4.74675" rot="MR180"/>
 <element name="R1" library="rcl" package="R0805" value="3k3" x="1.397" y="31.4325" smashed="yes" rot="R270">
 <attribute name="VALUE" x="-1.143" y="32.0675" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="LOG" library="jcgb" package="UNETHILOGO_TINY_SILK" value="UNETHILOGO" x="8.47725" y="21.733"/>
-<element name="U$1" library="jcgb" package="EMPTY" value="PAD" x="1.397" y="27.8765" rot="R90"/>
-<element name="C1" library="rcl" package="C1210" value="100uF" x="4.96825" y="3.71325" smashed="yes" rot="R180">
+<element name="CAP_SENSE" library="jcgb" package="EMPTY" value="PAD" x="1.397" y="27.8765" rot="R90"/>
+<element name="C1" library="rcl" package="C1210" value="1-10uF" x="4.96825" y="3.71325" smashed="yes" rot="R180">
 <attribute name="NAME" x="7.7485" y="2.39825" size="0.8128" layer="25"/>
 <attribute name="VALUE" x="6.87325" y="6.88825" size="1.27" layer="27" rot="R180"/>
 </element>
@@ -3858,9 +3864,7 @@ design rules under a new name.</description>
 <wire x1="5.11175" y1="11.176" x2="6.2865" y2="11.176" width="0.4064" layer="1"/>
 </signal>
 <signal name="RST">
-<contactref element="IC1" pad="1"/>
 <contactref element="ISP" pad="5"/>
-<wire x1="12.54125" y1="31.21025" x2="11.70305" y2="31.21025" width="0.4064" layer="1"/>
 <wire x1="15.1765" y1="26.416" x2="15.1765" y2="25.62225" width="0.4064" layer="1"/>
 <wire x1="15.1765" y1="25.62225" x2="15.4305" y2="25.36825" width="0.4064" layer="1"/>
 <wire x1="12.54125" y1="31.21025" x2="12.812253125" y2="31.097996875" width="0.4064" layer="1" curve="-45"/>
@@ -3868,13 +3872,14 @@ design rules under a new name.</description>
 <wire x1="14.38275" y1="29.5275" x2="14.38275" y2="27.472775" width="0.4064" layer="1"/>
 <wire x1="14.38275" y1="27.472775" x2="14.5687375" y2="27.0237625" width="0.4064" layer="1" curve="45"/>
 <wire x1="14.5687375" y1="27.0237625" x2="15.1765" y2="26.416" width="0.4064" layer="1"/>
+<contactref element="IC1" pad="1"/>
+<wire x1="12.54125" y1="31.21025" x2="11.70305" y2="31.21025" width="0.4064" layer="1"/>
 </signal>
 <signal name="PB0">
 <contactref element="IC1" pad="5"/>
 <contactref element="ISP" pad="4"/>
 <wire x1="18.89125" y1="27.40025" x2="18.63725" y2="27.40025" width="0.4064" layer="1"/>
 <wire x1="16.7005" y1="24.09825" x2="16.7005" y2="23.90775" width="0.4064" layer="1"/>
-<contactref element="JP3" pad="1"/>
 <wire x1="18.43405" y1="27.40025" x2="18.63725" y2="27.40025" width="0.4064" layer="1"/>
 <wire x1="19.4945" y1="23.14575" x2="17.0815" y2="23.14575" width="0.4064" layer="1"/>
 <wire x1="17.0815" y1="23.14575" x2="16.8275" y2="23.39975" width="0.4064" layer="1"/>
@@ -3887,6 +3892,7 @@ design rules under a new name.</description>
 <wire x1="20.3245125" y1="23.9757625" x2="19.4945" y2="23.14575" width="0.4064" layer="1"/>
 <wire x1="19.4945" y1="23.14575" x2="19.4945" y2="20.837025" width="0.4064" layer="1"/>
 <wire x1="19.4945" y1="20.837025" x2="19.3085125" y2="20.3880125" width="0.4064" layer="1" curve="-45"/>
+<contactref element="JP3" pad="1"/>
 <wire x1="19.3085125" y1="20.3880125" x2="18.4785" y2="19.558" width="0.4064" layer="1"/>
 </signal>
 <signal name="PB2">
@@ -3910,7 +3916,8 @@ design rules under a new name.</description>
 <wire x1="20.166696875" y1="28.040696875" x2="20.3245125" y2="28.1985125" width="0.127" layer="1"/>
 <wire x1="16.7005" y1="25.36825" x2="16.7005" y2="27.84475" width="0.4064" layer="1"/>
 <wire x1="16.7005" y1="27.84475" x2="16.85925" y2="28.0035" width="0.4064" layer="1" curve="-90"/>
-<wire x1="1.397" y1="32.3825" x2="1.74625" y2="32.512" width="0" layer="19" extent="1-1"/>
+<wire x1="1.397" y1="32.3825" x2="1.74625" y2="32.3825" width="0.4064" layer="1"/>
+<wire x1="1.74625" y1="32.3825" x2="1.74625" y2="32.512" width="0.4064" layer="1"/>
 </signal>
 <signal name="PB1">
 <contactref element="IC1" pad="6"/>
@@ -3958,7 +3965,7 @@ design rules under a new name.</description>
 <contactref element="LED2" pad="A"/>
 <contactref element="LED1" pad="C"/>
 <contactref element="LED3" pad="A"/>
-<contactref element="LED4" pad="C"/>
+<contactref element="STATUS" pad="C"/>
 <wire x1="4.10625" y1="25.527" x2="4.10625" y2="24.0665" width="0.4064" layer="1"/>
 <wire x1="4.10625" y1="24.0665" x2="4.10625" y2="22.987" width="0.4064" layer="1"/>
 <wire x1="9.23925" y1="30.65375" x2="9.36625" y2="30.65375" width="0.4064" layer="1"/>
@@ -3988,10 +3995,9 @@ design rules under a new name.</description>
 </signal>
 <signal name="PB4">
 <contactref element="IC1" pad="3"/>
-<contactref element="LED4" pad="A"/>
+<contactref element="STATUS" pad="A"/>
 <contactref element="LED3" pad="C"/>
 <contactref element="LED5" pad="A"/>
-<contactref element="LED6" pad="C"/>
 <wire x1="11.70305" y1="28.55375" x2="11.70305" y2="28.67025" width="0.4064" layer="1"/>
 <wire x1="11.70305" y1="28.67025" x2="11.58655" y2="28.55375" width="0.4064" layer="1" curve="-90"/>
 <wire x1="11.58655" y1="28.55375" x2="9.23925" y2="28.55375" width="0.4064" layer="1"/>
@@ -4002,9 +4008,7 @@ design rules under a new name.</description>
 <wire x1="8.128" y1="24.35225" x2="7.1755" y2="23.39975" width="0.4064" layer="1" curve="-90"/>
 <wire x1="7.1755" y1="23.39975" x2="6.619" y2="23.39975" width="0.4064" layer="1"/>
 <wire x1="6.619" y1="23.39975" x2="6.20625" y2="22.987" width="0.4064" layer="1" curve="90"/>
-<wire x1="6.20625" y1="29.972" x2="4.10625" y2="31.877" width="0.4064" layer="1"/>
-<wire x1="6.20625" y1="29.972" x2="4.15925" y2="31.8135" width="0.4064" layer="1"/>
-<wire x1="4.15925" y1="31.8135" x2="3.33375" y2="31.8135" width="0.4064" layer="1"/>
+<wire x1="4.10625" y1="31.8135" x2="3.33375" y2="31.8135" width="0.4064" layer="1"/>
 <wire x1="3.33375" y1="31.8135" x2="2.82575" y2="31.3055" width="0.4064" layer="1" curve="90"/>
 <wire x1="2.82575" y1="31.3055" x2="2.82575" y2="22.5425" width="0.4064" layer="1"/>
 <wire x1="2.82575" y1="22.5425" x2="3.58775" y2="21.7805" width="0.4064" layer="1" curve="90"/>
@@ -4012,6 +4016,10 @@ design rules under a new name.</description>
 <wire x1="5.5245" y1="21.7805" x2="6.1595" y2="22.4155" width="0.4064" layer="1" curve="90"/>
 <wire x1="6.1595" y1="22.4155" x2="6.1595" y2="22.94025" width="0.4064" layer="1"/>
 <wire x1="6.1595" y1="22.94025" x2="6.20625" y2="22.987" width="0.4064" layer="1" curve="-90"/>
+<wire x1="4.15925" y1="31.8135" x2="4.10625" y2="31.8135" width="0.4064" layer="1"/>
+<wire x1="4.10625" y1="31.8135" x2="4.10625" y2="31.877" width="0.4064" layer="1"/>
+<contactref element="LED6" pad="C"/>
+<wire x1="4.15925" y1="31.8135" x2="6.20625" y2="29.972" width="0.4064" layer="1"/>
 </signal>
 <signal name="N$2">
 </signal>
@@ -4060,7 +4068,7 @@ design rules under a new name.</description>
 <wire x1="21.5219875" y1="19.7439875" x2="21.072975" y2="19.558" width="0.4064" layer="1" curve="-45"/>
 <wire x1="21.072975" y1="19.558" x2="21.0185" y2="19.558" width="0.4064" layer="1"/>
 </signal>
-<signal name="VBAT">
+<signal name="BAT+">
 <contactref element="BAT" pad="1"/>
 <contactref element="BAT" pad="1@2"/>
 <wire x1="21.2569" y1="4.74675" x2="21.2569" y2="12.827" width="0" layer="16"/>
@@ -4089,7 +4097,7 @@ design rules under a new name.</description>
 <vertex x="17.17625" y="23.257"/>
 </polygon>
 <contactref element="R1" pad="2"/>
-<contactref element="U$1" pad="P$1"/>
+<contactref element="CAP_SENSE" pad="P$1"/>
 <wire x1="1.397" y1="30.4825" x2="1.397" y2="27.8765" width="0.4064" layer="1"/>
 </signal>
 <signal name="N$1">

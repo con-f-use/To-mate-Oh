@@ -1,17 +1,17 @@
 #!/usr/bin make
-# Indent: tab, Tabsize: 4, Encoding: UTF-8, Language: Make, Breaks: linux
-################################################################################
+# Indent: 4 spaces, Encoding: UTF-8, Language: Make (eng), Breaks: linux
+###############################################################################
 #
 # This file is part of To-mate-Oh.
 # Copyright © 2014 con-f-use.
-# Use under GNU General Public License.
+# Use under GNU General Public License v3+.
 #
-######################## Edit this to match your programmer anc micro controller
+####################### Edit this to match your programmer anc micro controller
 
 PROGRAMMER = usbtiny	# Your programmer here
-CPU =        attiny85	# Works with attiny45 and 85 as well
+CPU =        attiny25	# Works with attiny45 and 85 as well
 
-######################## Technicalities (you should not have to edit below here)
+####################### Technicalities (you should not have to edit below here)
 
 F_CPU =      8000000UL  # In MHz
 
